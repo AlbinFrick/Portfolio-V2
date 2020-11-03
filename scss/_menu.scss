@@ -1,0 +1,77 @@
+@import './variables';
+
+$transitionLength: 350ms;
+
+@media screen and (max-width: 600px) {
+    #hamburgerMenu {
+        width: 60%;
+        height: 100vh;
+        background-color: white;
+        position: fixed;
+        top: 0;
+        right: -500px;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20% 0 0 60%;
+        transition: right $transitionLength;
+        box-shadow: -5px 5px 15px black;
+        #menuButton {
+            width: 10vw;
+            height: 10vw;
+            position: fixed;
+            top: 15px;
+            right: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            transition: right $transitionLength;
+            .menuBars {
+                width: 100%;
+                height: 2px;
+                background-color: black;
+                transition: transform $transitionLength;
+            }
+        }
+        #menuList {
+            width: 65%;
+            height: 60vh;
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            .item {
+                width: 100%;
+                font-family: $font;
+                box-shadow: 0px 1px 5px;
+                border-radius: 20px;
+                text-align: center;
+            }
+            .nav-link {
+                display: inline-block;
+                width: 100%;
+                text-decoration: none;
+                color: black;
+                padding: 1.3rem 0;
+                border-radius: 20px;
+            }
+        }
+
+        &.active {
+            right: 0;
+            #menuButton {
+                right: 40%;
+            }
+            .bar1 {
+                transform: rotateZ(-45deg) translate(-25%, 8px);
+            }
+            .bar2 {
+                opacity: 0;
+            }
+            .bar3 {
+                transform: rotateZ(-135deg) translate(25%, 8px);
+            }
+        }
+    }
+}

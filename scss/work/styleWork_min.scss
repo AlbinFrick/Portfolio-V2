@@ -1,0 +1,41 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+@import '../menu';
+
+#content {
+    animation: transitionIn 750ms;
+    width: 100vw;
+    height: auto;
+
+    .workContainer {
+        width: 100vw;
+        height: 70vh;
+        margin-top: 20%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .work {
+        width: 90vw;
+        height: auto;
+        margin: 5% auto;
+        background-color: red;
+        padding: 10px;
+        border-radius: 15px;
+    }
+}
+
+// transition for page change
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+        transform: rotateX(-10deg);
+    }
+    to {
+        opacity: 1;
+        transform: rotateX(0);
+    }
+}

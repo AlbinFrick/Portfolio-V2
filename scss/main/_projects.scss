@@ -1,0 +1,106 @@
+@import '.././variables';
+
+@media screen and (max-width: 600px) {
+    #projects {
+        width: 100vw;
+        height: auto;
+        margin-top: 10%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h4 {
+            font-family: $font;
+            font-weight: 300;
+            display: inline-block;
+            width: 100vw;
+            margin-left: 5%;
+            text-decoration-line: underline;
+            text-align: left;
+        }
+
+        .project {
+            width: 80vw;
+            height: 10vh;
+            border-radius: 20px;
+            box-shadow: 0px 1px 5px;
+            box-shadow: beige;
+            margin: 4% 0;
+            transition: 350ms;
+            display: flex;
+            flex-direction: column;
+
+            .projectTitle {
+                font-family: $font;
+                font-weight: 400;
+                line-height: 10vh;
+                margin-left: 3%;
+                transition: font-weight $projectTitleTransition,
+                    font-size $projectTitleTransition;
+            }
+
+            .projectDescription {
+                font-family: $font;
+                font-size: 0.9em;
+                line-height: 1.4em;
+                padding: 0 15px 15px 15px;
+                display: none;
+            }
+            .projectImage {
+                width: 50%;
+                align-self: center;
+                display: none;
+                border-radius: 5px;
+            }
+            .projectURL {
+                width: 40%;
+                font-family: $font;
+                background-color: rgb(253, 238, 194);
+                border-radius: 5px;
+                text-decoration: none;
+                color: black;
+                display: none;
+                padding: 5px;
+                align-self: center;
+                margin-top: 10px;
+                text-align: center;
+            }
+
+            &.active {
+                width: 90vw;
+                height: auto;
+                padding-bottom: 20px;
+                background-color: white;
+
+                .projectDescription,
+                .projectURL,
+                .projectImage {
+                    display: block;
+                    animation: fadeInFromNone 1s;
+                }
+                .projectTitle {
+                    font-weight: 400;
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+}
+
+@keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}

@@ -1,0 +1,35 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-image: linear-gradient(135deg, #c3beb4, #ffffff);
+
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+@import '../menu';
+
+#content {
+    animation: transitionIn 750ms;
+    width: 100vw;
+    height: auto;
+
+    @import './profile';
+    @import './projects';
+}
+
+@import './footer';
+// transition for page change
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+        transform: rotateX(-10deg);
+    }
+    to {
+        opacity: 1;
+        transform: rotateX(0);
+    }
+}

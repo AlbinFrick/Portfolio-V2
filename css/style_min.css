@@ -1,0 +1,427 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-image: linear-gradient(135deg, #c3beb4, #ffffff);
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+@media screen and (max-width: 600px) {
+  #hamburgerMenu {
+    width: 60%;
+    height: 100vh;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    right: -500px;
+    z-index: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-radius: 20% 0 0 60%;
+    -webkit-transition: right 350ms;
+    transition: right 350ms;
+    -webkit-box-shadow: -5px 5px 15px black;
+            box-shadow: -5px 5px 15px black;
+  }
+  #hamburgerMenu #menuButton {
+    width: 10vw;
+    height: 10vw;
+    position: fixed;
+    top: 15px;
+    right: 25px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-transition: right 350ms;
+    transition: right 350ms;
+  }
+  #hamburgerMenu #menuButton .menuBars {
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    -webkit-transition: -webkit-transform 350ms;
+    transition: -webkit-transform 350ms;
+    transition: transform 350ms;
+    transition: transform 350ms, -webkit-transform 350ms;
+  }
+  #hamburgerMenu #menuList {
+    width: 65%;
+    height: 60vh;
+    list-style-type: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  #hamburgerMenu #menuList .item {
+    width: 100%;
+    font-family: raleway;
+    -webkit-box-shadow: 0px 1px 5px;
+            box-shadow: 0px 1px 5px;
+    border-radius: 20px;
+    text-align: center;
+  }
+  #hamburgerMenu #menuList .nav-link {
+    display: inline-block;
+    width: 100%;
+    text-decoration: none;
+    color: black;
+    padding: 1.3rem 0;
+    border-radius: 20px;
+  }
+  #hamburgerMenu.active {
+    right: 0;
+  }
+  #hamburgerMenu.active #menuButton {
+    right: 40%;
+  }
+  #hamburgerMenu.active .bar1 {
+    -webkit-transform: rotateZ(-45deg) translate(-25%, 8px);
+            transform: rotateZ(-45deg) translate(-25%, 8px);
+  }
+  #hamburgerMenu.active .bar2 {
+    opacity: 0;
+  }
+  #hamburgerMenu.active .bar3 {
+    -webkit-transform: rotateZ(-135deg) translate(25%, 8px);
+            transform: rotateZ(-135deg) translate(25%, 8px);
+  }
+}
+
+#content {
+  -webkit-animation: transitionIn 750ms;
+          animation: transitionIn 750ms;
+  width: 100vw;
+  height: auto;
+}
+
+@media screen and (max-width: 600px) {
+  #content #profileWrapper {
+    width: 100vw;
+    height: 50vh;
+    position: relative;
+    -webkit-transition: height 350ms;
+    transition: height 350ms;
+  }
+  #content #profileWrapper.active {
+    height: 70vh;
+  }
+  #content #profileWrapper.active #profile {
+    width: 30vw;
+    height: 30vw;
+    -webkit-box-shadow: 0px 2px 10px;
+            box-shadow: 0px 2px 10px;
+    left: 3%;
+    top: 7%;
+    background-color: red;
+  }
+  #content #profileWrapper.active #aboutMe {
+    width: 80vw;
+    height: 60vh;
+    left: 10%;
+    top: 20%;
+  }
+  #content #profileWrapper.active #aboutMe #buttonOpen {
+    opacity: 0;
+  }
+  #content #profileWrapper.active #aboutMe #buttonClose {
+    opacity: 1;
+  }
+  #content #profileWrapper.active #title {
+    left: 15%;
+    bottom: 80%;
+    font-size: 1.7em;
+    font-weight: 300;
+    letter-spacing: 0px;
+  }
+  #content #profileWrapper #profile {
+    width: 70vw;
+    height: 70vw;
+    border-radius: 50%;
+    -webkit-box-shadow: 0px 5px 20px;
+            box-shadow: 0px 5px 20px;
+    position: absolute;
+    top: 5%;
+    left: 15%;
+    background-image: url("../../data/images/ProfilBilder/Profilbild_Albin1.png");
+    background-size: cover;
+    -webkit-transition: 350ms;
+    transition: 350ms;
+  }
+  #content #profileWrapper #aboutMe {
+    width: 40%;
+    height: 50vw;
+    border-radius: 20px;
+    border: 1px solid black;
+    position: absolute;
+    top: 23vw;
+    left: 40%;
+    -webkit-transition: 350ms;
+    transition: 350ms;
+  }
+  #content #profileWrapper #aboutMe .aboutMeTitle {
+    font-family: raleway;
+    margin-top: 20%;
+    padding-left: 15px;
+    font-weight: 400;
+    opacity: 0;
+    -webkit-transition: opacity 350ms;
+    transition: opacity 350ms;
+  }
+  #content #profileWrapper #aboutMe .aboutMeTitle.active {
+    opacity: 1;
+  }
+  #content #profileWrapper #aboutMe .aboutMeDescription {
+    font-family: raleway;
+    padding: 15px;
+    font-size: 1rem;
+    opacity: 0;
+    -webkit-transition: opacity 350ms;
+    transition: opacity 350ms;
+  }
+  #content #profileWrapper #aboutMe .aboutMeDescription.active {
+    opacity: 1;
+  }
+  #content #profileWrapper #aboutMe #buttonOpen {
+    font-family: raleway;
+    font-size: 2.7vw;
+    position: absolute;
+    bottom: 7px;
+    right: 7px;
+    border: none;
+    background: transparent;
+    color: black;
+    -webkit-transition: 350ms;
+    transition: 350ms;
+  }
+  #content #profileWrapper #aboutMe #buttonClose {
+    opacity: 0;
+    position: absolute;
+    background: transparent;
+    border: none;
+    width: 20px;
+    height: 20px;
+    top: 15px;
+    right: 10px;
+  }
+  #content #profileWrapper #aboutMe #buttonClose .line {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 1px;
+    background-color: white;
+  }
+  #content #profileWrapper #aboutMe #buttonClose .line:first-child {
+    -webkit-transform: rotateZ(-45deg);
+            transform: rotateZ(-45deg);
+  }
+  #content #profileWrapper #aboutMe #buttonClose .line:last-child {
+    -webkit-transform: rotateZ(45deg);
+            transform: rotateZ(45deg);
+  }
+  #content #profileWrapper #title {
+    font-family: raleway;
+    font-weight: 300;
+    font-size: 2.3em;
+    letter-spacing: 3px;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    -webkit-transition: 350ms;
+    transition: 350ms;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #content #projects {
+    width: 100vw;
+    height: auto;
+    margin-top: 10%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #content #projects h4 {
+    font-family: raleway;
+    font-weight: 300;
+    display: inline-block;
+    width: 100vw;
+    margin-left: 5%;
+    -webkit-text-decoration-line: underline;
+            text-decoration-line: underline;
+    text-align: left;
+  }
+  #content #projects .project {
+    width: 80vw;
+    height: 10vh;
+    border-radius: 20px;
+    -webkit-box-shadow: 0px 1px 5px;
+            box-shadow: 0px 1px 5px;
+    -webkit-box-shadow: beige;
+            box-shadow: beige;
+    margin: 4% 0;
+    -webkit-transition: 350ms;
+    transition: 350ms;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #content #projects .project .projectTitle {
+    font-family: raleway;
+    font-weight: 400;
+    line-height: 10vh;
+    margin-left: 3%;
+    -webkit-transition: font-weight 500ms, font-size 500ms;
+    transition: font-weight 500ms, font-size 500ms;
+  }
+  #content #projects .project .projectDescription {
+    font-family: raleway;
+    font-size: 0.9em;
+    line-height: 1.4em;
+    padding: 0 15px 15px 15px;
+    display: none;
+  }
+  #content #projects .project .projectImage {
+    width: 50%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    display: none;
+    border-radius: 5px;
+  }
+  #content #projects .project .projectURL {
+    width: 40%;
+    font-family: raleway;
+    background-color: #fdeec2;
+    border-radius: 5px;
+    text-decoration: none;
+    color: black;
+    display: none;
+    padding: 5px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin-top: 10px;
+    text-align: center;
+  }
+  #content #projects .project.active {
+    width: 90vw;
+    height: auto;
+    padding-bottom: 20px;
+    background-color: white;
+  }
+  #content #projects .project.active .projectDescription,
+  #content #projects .project.active .projectURL,
+  #content #projects .project.active .projectImage {
+    display: block;
+    -webkit-animation: fadeInFromNone 1s;
+            animation: fadeInFromNone 1s;
+  }
+  #content #projects .project.active .projectTitle {
+    font-weight: 400;
+    font-size: 2rem;
+  }
+}
+
+@-webkit-keyframes fadeInFromNone {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  1% {
+    display: block;
+    opacity: 0;
+  }
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInFromNone {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  1% {
+    display: block;
+    opacity: 0;
+  }
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+
+#footer {
+  width: 100%;
+  height: 10vh;
+  background-color: hotpink;
+}
+
+@-webkit-keyframes transitionIn {
+  from {
+    opacity: 0;
+    -webkit-transform: rotateX(-10deg);
+            transform: rotateX(-10deg);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0);
+  }
+}
+
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+    -webkit-transform: rotateX(-10deg);
+            transform: rotateX(-10deg);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0);
+  }
+}
+/*# sourceMappingURL=style_min.css.map */
