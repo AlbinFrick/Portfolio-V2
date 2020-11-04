@@ -1,31 +1,57 @@
-// DATA --> push to firebase later
-//[
-//     {
-//         name: 'Actsport',
-//         description:
-//             'This project was a consulting job for the startup Actsport. The start up is developing a application for sport psychology. The application had some design flaws in a interaction point of view. I helped the company to come up with a strategy how to improve the app. I then created a prototype using figma. I did tests on potential customers and on some people from the local gym. The result can be seen below.',
-//         image: '../images/actsport.jpg',
-//         id: 0,
-//     },
-//     {
-//         name: 'Curiosum Find',
-//         description:
-//             'With close collaboration with Curiosum I had a leading role in a 60 people project of designing and implementing an AR-integrated applikation',
-//         id: 1,
-//     },
-//     {
-//         name: 'Arboreal',
-//         description:
-//             'As a part of a course we created and tested a prototpe useing Adobe XD',
-//         id: 2,
-//     },
-//     {
-//         name: 'Typer',
-//         description:
-//             'As a part of a course we created a game to race against your friends by typing. This used socket.io',
-//         id: 3,
-//     },
-// ];
+const scrollToElement = (id) => {
+    var element = document.getElementById(id);
+    var bodyRect = document.body.getBoundingClientRect(),
+        elemRect = element.getBoundingClientRect(),
+        offset = elemRect.top - bodyRect.top;
+    window.scrollTo({
+        top: offset - 50,
+        left: 0,
+        behavior: 'smooth',
+    });
+};
+
+// OPEN AND CLOSING ABOUT ME
+
+const aboutMeTitle = document.querySelector(".aboutMeTitle");
+const aboutMeDescription = document.querySelector(".aboutMeDescription");
+const toggleAboutMeText = () => {
+    aboutMeTitle.classList.toggle('active');
+    aboutMeDescription.classList.toggle('active');
+}
+const toggleAboutMe = () => {
+    if (profileWrapper.className.includes('active')) {
+        toggleAboutMeText();
+        setTimeout(() => {
+            profileWrapper.classList.toggle('active');
+        }, 150);
+    }
+    else {
+        scrollToElement(profileWrapper.id)
+        var projects = document.getElementsByClassName('project')
+        for (var i = 0; i < projects.length; i++) {
+            if (projects[i].className.includes('active'))
+                projects[i].classList.remove('active');
+        }
+        profileWrapper.classList.toggle('active');
+        setTimeout(() => {
+            toggleAboutMeText();
+        }, 300);
+    }
+};
+
+const btnClose = document.querySelector("#buttonClose");
+const btnOpen = document.querySelector("#buttonOpen");
+
+profile.addEventListener('click', toggleAboutMe);
+btnClose.addEventListener('click', toggleAboutMe);
+btnOpen.addEventListener('click', toggleAboutMe);
+
+//////////////////////////////////////////////////////////////////////
+
+
+
+// CREATING PROJECTS FROM .JSON-FILE
+
 fetch("./data/projects.json")
     .then(response => {
         return response.json();
@@ -40,17 +66,7 @@ fetch("./data/projects.json")
 
         var projectsContainer = document.getElementById('projects');
 
-        const scrollToElement = (id) => {
-            var element = document.getElementById(id);
-            var bodyRect = document.body.getBoundingClientRect(),
-                elemRect = element.getBoundingClientRect(),
-                offset = elemRect.top - bodyRect.top;
-            window.scrollTo({
-                top: offset - 50,
-                left: 0,
-                behavior: 'smooth',
-            });
-        };
+
 
         projects.forEach((project) => {
             var projectBox = document.createElement('div');
@@ -88,14 +104,12 @@ fetch("./data/projects.json")
             projectBox.addEventListener('click', () => {
                 var loadedProjects = document.getElementsByClassName('project');
                 for (var i = 0; i < loadedProjects.length; i++) {
-
                     if (loadedProjects[i].className.includes('active') && loadedProjects[i].id != projectBox.id) {
                         loadedProjects[i].classList.remove('active');
                     }
                 }
-
                 projectBox.classList.toggle('active');
-                if (profile.className.includes('active')) {
+                if (profileContainer.className.includes('active')) {
                     toggleAboutMe();
                 }
                 setTimeout(() => {
@@ -108,37 +122,6 @@ fetch("./data/projects.json")
 
     });
 
-//////////////////////////////////////////////////////////////////////
-
-// OPEN AND CLOSING ABOUT ME
-
-const aboutMeTitle = document.querySelector(".aboutMeTitle");
-const aboutMeDescription = document.querySelector(".aboutMeDescription");
-const toggleAboutMeText = () => {
-    aboutMeTitle.classList.toggle('active');
-    aboutMeDescription.classList.toggle('active');
-}
-const toggleAboutMe = () => {
-    if (profileWrapper.className.includes('active')) {
-        toggleAboutMeText();
-        setTimeout(() => {
-            profileWrapper.classList.toggle('active');
-        }, 150);
-    }
-    else {
-        profileWrapper.classList.toggle('active');
-        setTimeout(() => {
-            toggleAboutMeText();
-        }, 300);
-    }
-};
-
-const btnClose = document.querySelector("#buttonClose");
-const btnOpen = document.querySelector("#buttonOpen");
-
-profile.addEventListener('click', toggleAboutMe);
-btnClose.addEventListener('click', toggleAboutMe);
-btnOpen.addEventListener('click', toggleAboutMe);
 
 //////////////////////////////////////////////////////////////////////
 
