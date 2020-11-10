@@ -119,6 +119,7 @@ body {
   #hamburgerMenu #menuList {
     width: 65%;
     height: 60vh;
+    margin-bottom: 30%;
     list-style-type: none;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -133,10 +134,16 @@ body {
   #hamburgerMenu #menuList .item {
     width: 100%;
     font-family: raleway;
-    -webkit-box-shadow: 0px 1px 5px;
-            box-shadow: 0px 1px 5px;
     border-radius: 20px;
+    background: #ffffff;
+    -webkit-box-shadow: 6px 6px 12px #c4c4c4, -6px -6px 12px #ffffff;
+            box-shadow: 6px 6px 12px #c4c4c4, -6px -6px 12px #ffffff;
     text-align: center;
+  }
+  #hamburgerMenu #menuList .item:active {
+    background: #ffffff;
+    -webkit-box-shadow: inset 6px 6px 12px #c4c4c4, inset -6px -6px 12px #ffffff;
+            box-shadow: inset 6px 6px 12px #c4c4c4, inset -6px -6px 12px #ffffff;
   }
   #hamburgerMenu #menuList .nav-link {
     display: inline-block;
@@ -378,10 +385,9 @@ body {
     width: 80vw;
     height: 10vh;
     border-radius: 20px;
-    -webkit-box-shadow: 0px 1px 5px;
-            box-shadow: 0px 1px 5px;
-    -webkit-box-shadow: beige;
-            box-shadow: beige;
+    background: #e1dfd8;
+    -webkit-box-shadow: 9px 9px 18px #b2b0ab, -9px -9px 18px #ffffff;
+            box-shadow: 9px 9px 18px #b2b0ab, -9px -9px 18px #ffffff;
     margin: 4% 0;
     -webkit-transition: 350ms;
     transition: 350ms;
@@ -465,17 +471,23 @@ body {
   }
 }
 
-#footer {
-  width: 100%;
-  height: 10vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+@media screen and (max-width: 600px) {
+  #footer {
+    width: 100%;
+    height: 10vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    margin-bottom: 5%;
+  }
 }
 /*# sourceMappingURL=style_min.css.map */
