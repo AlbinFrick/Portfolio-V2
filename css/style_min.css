@@ -442,6 +442,9 @@ body {
     height: auto;
     padding-bottom: 20px;
     background-color: white;
+    background: #e1dfd8;
+    -webkit-box-shadow: inset 9px 9px 18px #adaca6, inset -9px -9px 18px #ffffff;
+            box-shadow: inset 9px 9px 18px #adaca6, inset -9px -9px 18px #ffffff;
   }
   #content #projects .project.active .projectDescription,
   #content #projects .project.active .projectURL,
