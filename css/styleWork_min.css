@@ -78,7 +78,7 @@
             box-shadow: 6px 6px 12px #c4c4c4, -6px -6px 12px #ffffff;
     text-align: center;
   }
-  #hamburgerMenu #menuList .item:active, #hamburgerMenu #menuList .item.active {
+  #hamburgerMenu #menuList .item:active, #hamburgerMenu #menuList .item:focus, #hamburgerMenu #menuList .item.active {
     background: #ffffff;
     -webkit-box-shadow: inset 6px 6px 12px #c4c4c4, inset -6px -6px 12px #ffffff;
             box-shadow: inset 6px 6px 12px #c4c4c4, inset -6px -6px 12px #ffffff;

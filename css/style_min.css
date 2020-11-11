@@ -140,7 +140,7 @@ body {
             box-shadow: 6px 6px 12px #c4c4c4, -6px -6px 12px #ffffff;
     text-align: center;
   }
-  #hamburgerMenu #menuList .item:active, #hamburgerMenu #menuList .item.active {
+  #hamburgerMenu #menuList .item:active, #hamburgerMenu #menuList .item:focus, #hamburgerMenu #menuList .item.active {
     background: #ffffff;
     -webkit-box-shadow: inset 6px 6px 12px #c4c4c4, inset -6px -6px 12px #ffffff;
             box-shadow: inset 6px 6px 12px #c4c4c4, inset -6px -6px 12px #ffffff;
@@ -210,7 +210,7 @@ body {
 @media screen and (max-width: 600px) {
   #content #profileWrapper {
     width: 100vw;
-    height: 50vh;
+    height: 90vw;
     position: relative;
     -webkit-transition: height 350ms;
     transition: height 350ms;
@@ -255,7 +255,7 @@ body {
     position: absolute;
     top: 5%;
     left: 15%;
-    background-image: url("/Portfolio-V2/data/images/profilepics/Profilbild_Albin3_Small.jpg");
+    background-image: url("/data/images/profilepics/Profilbild_Albin3_Small.jpg");
     background-size: cover;
     -webkit-transition: 350ms;
     transition: 350ms;
@@ -383,7 +383,7 @@ body {
   }
   #content #projects .project {
     width: 80vw;
-    height: 10vh;
+    height: 17vw;
     border-radius: 20px;
     background: #e1dfd8;
     -webkit-box-shadow: 9px 9px 18px #b2b0ab, -9px -9px 18px #ffffff;
@@ -402,7 +402,7 @@ body {
   #content #projects .project .projectTitle {
     font-family: raleway;
     font-weight: 400;
-    line-height: 10vh;
+    line-height: 17vw;
     margin-left: 3%;
     -webkit-transition: font-weight 500ms, font-size 500ms;
     transition: font-weight 500ms, font-size 500ms;

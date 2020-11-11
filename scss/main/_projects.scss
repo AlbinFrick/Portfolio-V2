@@ -22,7 +22,7 @@
 
         .project {
             width: 80vw;
-            height: 10vh;
+            height: 17vw;
             border-radius: 20px;
             background: #e1dfd8;
             box-shadow: 9px 9px 18px #b2b0ab, -9px -9px 18px #ffffff;
@@ -34,7 +34,7 @@
             .projectTitle {
                 font-family: $font;
                 font-weight: 400;
-                line-height: 10vh;
+                line-height: 17vw;
                 margin-left: 3%;
                 transition: font-weight $projectTitleTransition,
                     font-size $projectTitleTransition;

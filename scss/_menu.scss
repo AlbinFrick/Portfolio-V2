@@ -50,6 +50,7 @@ $transitionLength: 350ms;
                 box-shadow: 6px 6px 12px #c4c4c4, -6px -6px 12px #ffffff;
                 text-align: center;
                 &:active,
+                &:focus,
                 &.active {
                     background: #ffffff;
                     box-shadow: inset 6px 6px 12px #c4c4c4, inset -6px -6px 12px #ffffff;
