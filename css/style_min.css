@@ -255,7 +255,7 @@ body {
     position: absolute;
     top: 5%;
     left: 15%;
-    background-image: url("/data/images/profilepics/Profilbild_Albin3_Small.jpg");
+    background-image: url("./data/images/profilepics/Profilbild_Albin3_Small.jpg");
     background-size: cover;
     -webkit-transition: 350ms;
     transition: 350ms;
