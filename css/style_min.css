@@ -177,6 +177,15 @@ body {
           animation: transitionIn 750ms;
   width: 100vw;
   height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 @keyframes fadeInFromNone {
@@ -211,27 +220,31 @@ body {
   #content #profileWrapper {
     width: 100vw;
     height: 90vw;
+    margin-top: 5%;
     position: relative;
     -webkit-transition: height 350ms;
     transition: height 350ms;
   }
   #content #profileWrapper.active {
-    height: 70vh;
+    height: auto;
   }
   #content #profileWrapper.active #profile {
     width: 30vw;
     height: 30vw;
-    -webkit-box-shadow: 0px 2px 10px;
-            box-shadow: 0px 2px 10px;
+    -webkit-box-shadow: 0px 1px 8px;
+            box-shadow: 0px 1px 8px;
     left: 3%;
     top: 7%;
-    background-color: red;
   }
   #content #profileWrapper.active #aboutMe {
+    position: relative !important;
+    margin-top: 26vw;
     width: 80vw;
-    height: 60vh;
+    height: auto;
+    padding-bottom: 1%;
+    border-radius: 20px;
     left: 10%;
-    top: 20%;
+    top: 0;
   }
   #content #profileWrapper.active #aboutMe #buttonOpen {
     opacity: 0;
@@ -240,34 +253,44 @@ body {
     opacity: 1;
   }
   #content #profileWrapper.active #title {
-    left: 15%;
+    width: 50vw;
+    left: 35%;
     bottom: 80%;
-    font-size: 1.7em;
+    font-size: 10vw;
     font-weight: 300;
     letter-spacing: 0px;
   }
+}
+
+@media screen and (max-width: 600px) and (max-width: 360px) {
+  #content #profileWrapper.active #title {
+    bottom: 85%;
+  }
+}
+
+@media screen and (max-width: 600px) {
   #content #profileWrapper #profile {
     width: 70vw;
     height: 70vw;
     border-radius: 50%;
-    -webkit-box-shadow: 0px 5px 20px;
-            box-shadow: 0px 5px 20px;
+    -webkit-box-shadow: 0px 3px 10px;
+            box-shadow: 0px 3px 10px;
     position: absolute;
     top: 5%;
     left: 15%;
-    background-image: url("./data/images/profilepics/Profilbild_Albin3_Small.jpg");
+    background-image: url("Protfolio-V2/data/images/profilepics/Profilbild_Albin3_Small.jpg");
     background-size: cover;
     -webkit-transition: 350ms;
     transition: 350ms;
   }
   #content #profileWrapper #aboutMe {
-    width: 40%;
+    width: 50%;
     height: 50vw;
-    border-radius: 20px;
+    border-radius: 20px 100px 20px 100px;
     border: 1px solid black;
     position: absolute;
     top: 23vw;
-    left: 40%;
+    left: 35%;
     -webkit-transition: 350ms;
     transition: 350ms;
   }
@@ -340,9 +363,8 @@ body {
     font-weight: 300;
     font-size: 2.3em;
     letter-spacing: 3px;
+    display: inline-block;
     position: absolute;
-    margin-left: auto;
-    margin-right: auto;
     left: 0;
     right: 0;
     bottom: 0;
@@ -386,8 +408,8 @@ body {
     height: 17vw;
     border-radius: 20px;
     background: #e1dfd8;
-    -webkit-box-shadow: 9px 9px 18px #b2b0ab, -9px -9px 18px #ffffff;
-            box-shadow: 9px 9px 18px #b2b0ab, -9px -9px 18px #ffffff;
+    -webkit-box-shadow: 0px 0px 5px 0.5px;
+            box-shadow: 0px 0px 5px 0.5px;
     margin: 4% 0;
     -webkit-transition: 350ms;
     transition: 350ms;
@@ -442,9 +464,6 @@ body {
     height: auto;
     padding-bottom: 20px;
     background-color: white;
-    background: #e1dfd8;
-    -webkit-box-shadow: inset 9px 9px 18px #adaca6, inset -9px -9px 18px #ffffff;
-            box-shadow: inset 9px 9px 18px #adaca6, inset -9px -9px 18px #ffffff;
   }
   #content #projects .project.active .projectDescription,
   #content #projects .project.active .projectURL,

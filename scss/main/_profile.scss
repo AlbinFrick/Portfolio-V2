@@ -5,23 +5,27 @@
     #profileWrapper {
         width: 100vw;
         height: 90vw;
+        margin-top: 5%;
         position: relative;
         transition: height 350ms;
         &.active {
-            height: 70vh;
+            height: auto;
             #profile {
                 width: 30vw;
                 height: 30vw;
-                box-shadow: 0px 2px 10px;
+                box-shadow: 0px 1px 8px;
                 left: 3%;
                 top: 7%;
-                background-color: red;
             }
             #aboutMe {
+                position: relative !important;
+                margin-top: 26vw;
                 width: 80vw;
-                height: 60vh;
+                height: auto;
+                padding-bottom: 1%;
+                border-radius: 20px;
                 left: 10%;
-                top: 20%;
+                top: 0;
 
                 #buttonOpen {
                     opacity: 0;
@@ -32,9 +36,13 @@
             }
 
             #title {
-                left: 15%;
+                width: 50vw;
+                left: 35%;
                 bottom: 80%;
-                font-size: 1.7em;
+                @media screen and (max-width: 360px) {
+                    bottom: 85%;
+                }
+                font-size: 10vw;
                 font-weight: 300;
                 letter-spacing: 0px;
             }
@@ -44,23 +52,23 @@
             width: 70vw;
             height: 70vw;
             border-radius: 50%;
-            box-shadow: 0px 5px 20px;
+            box-shadow: 0px 3px 10px;
             position: absolute;
             top: 5%;
             left: 15%;
-            background-image: url('./data/images/profilepics/Profilbild_Albin3_Small.jpg');
+            background-image: url('Protfolio-V2/data/images/profilepics/Profilbild_Albin3_Small.jpg');
             background-size: cover;
             transition: 350ms;
         }
 
         #aboutMe {
-            width: 40%;
+            width: 50%;
             height: 50vw;
-            border-radius: 20px;
+            border-radius: 20px 100px 20px 100px;
             border: 1px solid black;
             position: absolute;
             top: 23vw;
-            left: 40%;
+            left: 35%;
             transition: 350ms;
             .aboutMeTitle {
                 font-family: $font;
@@ -129,9 +137,8 @@
             font-weight: 300;
             font-size: 2.3em;
             letter-spacing: 3px;
+            display: inline-block;
             position: absolute;
-            margin-left: auto;
-            margin-right: auto;
             left: 0;
             right: 0;
             bottom: 0;

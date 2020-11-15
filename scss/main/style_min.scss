@@ -19,6 +19,10 @@ body {
     width: 100vw;
     height: auto;
 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
     @import './profile';
     @import './projects';
 }
