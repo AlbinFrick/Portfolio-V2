@@ -21,9 +21,7 @@ const toggleAboutMeText = () => {
 const toggleAboutMe = () => {
     if (profileWrapper.className.includes('active')) {
         toggleAboutMeText();
-        setTimeout(() => {
-            profileWrapper.classList.toggle('active');
-        }, 150);
+        profileWrapper.classList.toggle('active');
     }
     else {
         scrollToElement(profileWrapper.id)
@@ -33,9 +31,7 @@ const toggleAboutMe = () => {
                 projects[i].classList.remove('active');
         }
         profileWrapper.classList.toggle('active');
-        setTimeout(() => {
-            toggleAboutMeText();
-        }, 300);
+        toggleAboutMeText();
     }
 };
 
