@@ -165,7 +165,7 @@
 }
 
 #content .work.active {
-  height: 35vh;
+  height: 45vh;
 }
 
 #content .work.active .title {
@@ -217,7 +217,7 @@
   padding: 4%;
   text-align: left;
   position: absolute;
-  height: 17vh;
+  height: 23vh;
   bottom: 0;
   background-color: white;
   border-radius: 20px;
