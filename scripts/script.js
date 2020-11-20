@@ -14,14 +14,25 @@ const scrollToElement = (id) => {
 
 const aboutMeTitle = document.querySelector(".aboutMeTitle");
 const aboutMeDescription = document.querySelector(".aboutMeDescription");
+const title = document.querySelector("#title");
+const titleActive = document.querySelector("#titleActive");
+const projectContainer = document.querySelector("#projects");
+const profileWrapper = document.querySelector("#profileWrapper");
 const toggleAboutMeText = () => {
     aboutMeTitle.classList.toggle('active');
     aboutMeDescription.classList.toggle('active');
 }
 const toggleAboutMe = () => {
     if (profileWrapper.className.includes('active')) {
-        toggleAboutMeText();
-        profileWrapper.classList.toggle('active');
+        setTimeout(() => {
+            setTimeout(() => {
+                title.classList.toggle('active');
+            }, 300);
+            toggleAboutMeText();
+            profileWrapper.classList.toggle('active');
+            projectContainer.classList.toggle('active');
+        }, 200);
+        titleActive.classList.toggle('active');
     }
     else {
         scrollToElement(profileWrapper.id)
@@ -30,17 +41,28 @@ const toggleAboutMe = () => {
             if (projects[i].className.includes('active'))
                 projects[i].classList.remove('active');
         }
-        profileWrapper.classList.toggle('active');
-        toggleAboutMeText();
+        setTimeout(() => {
+            setTimeout(() => {
+                titleActive.classList.toggle('active');
+            }, 200);
+            profileWrapper.classList.toggle('active');
+            projectContainer.classList.toggle('active');
+            setTimeout(() => {
+                toggleAboutMeText();
+            }, 350);
+        }, 200);
+        title.classList.toggle('active');
     }
 };
 
 const btnClose = document.querySelector("#buttonClose");
 const btnOpen = document.querySelector("#buttonOpen");
+const profile = document.querySelector("#profile");
 
-profile.addEventListener('click', toggleAboutMe);
+// profile.addEventListener('click', toggleAboutMe);
 btnClose.addEventListener('click', toggleAboutMe);
 btnOpen.addEventListener('click', toggleAboutMe);
+profile.addEventListener('click', toggleAboutMe);
 
 //////////////////////////////////////////////////////////////////////
 

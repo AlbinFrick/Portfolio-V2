@@ -3,7 +3,7 @@
         {
             "name": "Actsport",
             "description": "This project was a consulting job for a start-up called Actsport. The start-up is developing an application for sport psychology. The application had some design flaws from an interaction point of view. I helped the company to come up with a strategy on how to improve the app. I then created a prototype using Figma. I did tests on potential customers and some people from the local gym. The final prototype can be found in the link below.",
-            "image": "/Portfolio-V2/data/images/projectImages/actsport__frontPage.jpeg",
+            "image": "https://github.com/AlbinFrick/Portfolio-V2/blob/main/data/images/projectImages/actsport__frontPage.jpeg?raw=true",
             "url": "https://www.figma.com/proto/VzKmYMEBnYkdrpkC7jtQaT/Actsport-App?node-id=248%3A7583&viewport=730%2C447%2C0.06269942224025726&scaling=scale-down",
             "id": 0
         },
