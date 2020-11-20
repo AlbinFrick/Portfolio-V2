@@ -69,6 +69,7 @@
             @include profile-transition;
             .aboutMeTitle {
                 font-family: $font;
+                font-size: 7vw;
                 margin-top: 15%;
                 padding-left: 15px;
                 font-weight: 300;
@@ -80,7 +81,7 @@
             }
             .aboutMeDescription {
                 font-family: $font;
-                font-size: 1rem;
+                font-size: 4.2vw;
                 font-weight: 300;
                 padding: 15px;
                 display: none;

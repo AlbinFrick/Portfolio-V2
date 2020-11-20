@@ -1,0 +1,27 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+@import '../menu';
+@import '../variables';
+
+#content {
+    animation: transitionIn 750ms;
+    width: 100vw;
+    height: auto;
+    font-family: $font;
+    display: grid;
+    grid-template-rows: 10vh 10vh 70vh 10vh;
+    grid-template-columns: 1fr 10fr 1fr;
+    h1 {
+        grid-column: 2;
+        grid-row: 2;
+        font-size: 10vw;
+    }
+    img {
+        grid-column: 2;
+        grid-row: 3;
+        width: 100%;
+    }
+}

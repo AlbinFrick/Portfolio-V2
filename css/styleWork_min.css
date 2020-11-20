@@ -56,15 +56,11 @@
   }
   #hamburgerMenu #menuButton .bar2 {
     width: 75%;
-    -ms-flex-item-align: end;
-        -ms-grid-row-align: end;
-        align-self: end;
+    margin-left: 25%;
   }
   #hamburgerMenu #menuButton .bar3 {
     width: 50%;
-    -ms-flex-item-align: end;
-        -ms-grid-row-align: end;
-        align-self: end;
+    margin-left: 50%;
   }
   #hamburgerMenu #menuList {
     width: 65%;
@@ -117,9 +113,7 @@
     opacity: 0;
   }
   #hamburgerMenu.active #menuButton .bar3 {
-    -ms-flex-item-align: start;
-        -ms-grid-row-align: start;
-        align-self: start;
+    margin-left: 0;
     width: 10vw;
     -webkit-transform: rotateZ(45deg) translate(-25%, -8px);
             transform: rotateZ(45deg) translate(-25%, -8px);
