@@ -142,6 +142,18 @@ body {
     transition: transform 350ms;
     transition: transform 350ms, -webkit-transform 350ms;
   }
+  #hamburgerMenu #menuButton .bar2 {
+    width: 75%;
+    -ms-flex-item-align: end;
+        -ms-grid-row-align: end;
+        align-self: end;
+  }
+  #hamburgerMenu #menuButton .bar3 {
+    width: 50%;
+    -ms-flex-item-align: end;
+        -ms-grid-row-align: end;
+        align-self: end;
+  }
   #hamburgerMenu #menuList {
     width: 65%;
     height: 60vh;
@@ -185,16 +197,20 @@ body {
   #hamburgerMenu.active #menuButton {
     right: 40%;
   }
-  #hamburgerMenu.active .bar1 {
+  #hamburgerMenu.active #menuButton .bar1 {
     -webkit-transform: rotateZ(-45deg) translate(-25%, 8px);
             transform: rotateZ(-45deg) translate(-25%, 8px);
   }
-  #hamburgerMenu.active .bar2 {
+  #hamburgerMenu.active #menuButton .bar2 {
     opacity: 0;
   }
-  #hamburgerMenu.active .bar3 {
-    -webkit-transform: rotateZ(-135deg) translate(25%, 8px);
-            transform: rotateZ(-135deg) translate(25%, 8px);
+  #hamburgerMenu.active #menuButton .bar3 {
+    -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
+    width: 10vw;
+    -webkit-transform: rotateZ(45deg) translate(-25%, -8px);
+            transform: rotateZ(45deg) translate(-25%, -8px);
   }
 }
 

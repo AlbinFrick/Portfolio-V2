@@ -33,6 +33,14 @@ $transitionLength: 350ms;
                 background-color: black;
                 transition: transform $transitionLength;
             }
+            .bar2 {
+                width: 75%;
+                align-self: end;
+            }
+            .bar3 {
+                width: 50%;
+                align-self: end;
+            }
         }
         #menuList {
             width: 65%;
@@ -70,15 +78,17 @@ $transitionLength: 350ms;
             right: 0;
             #menuButton {
                 right: 40%;
-            }
-            .bar1 {
-                transform: rotateZ(-45deg) translate(-25%, 8px);
-            }
-            .bar2 {
-                opacity: 0;
-            }
-            .bar3 {
-                transform: rotateZ(-135deg) translate(25%, 8px);
+                .bar1 {
+                    transform: rotateZ(-45deg) translate(-25%, 8px);
+                }
+                .bar2 {
+                    opacity: 0;
+                }
+                .bar3 {
+                    align-self: start;
+                    width: 10vw;
+                    transform: rotateZ(45deg) translate(-25%, -8px);
+                }
             }
         }
     }
