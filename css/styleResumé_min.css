@@ -149,4 +149,11 @@
   grid-row: 3;
   width: 100%;
 }
+
+#content a {
+  -ms-grid-column: 2;
+  grid-column: 2;
+  -ms-grid-row: 4;
+  grid-row: 4;
+}
 /*# sourceMappingURL=styleResumé_min.css.map */
