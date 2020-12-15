@@ -278,8 +278,8 @@ html {
     display: grid;
     -ms-grid-columns: 10vw 80vw 10vw;
         grid-template-columns: 10vw 80vw 10vw;
-    -ms-grid-rows: 10vw 80vw 40vw;
-        grid-template-rows: 10vw 80vw 40vw;
+    -ms-grid-rows: 10vw 80vw 20vw 20vw;
+        grid-template-rows: 10vw 80vw 20vw 20vw;
     height: 130vw;
     margin-bottom: 5%;
     -webkit-transition: grid-template-columns 500ms, grid-template-rows 500ms;
@@ -295,8 +295,8 @@ html {
   }
   #content #profileWrapper.active #aboutMe {
     -ms-grid-row: 2;
-    -ms-grid-row-span: 2;
-    grid-row: 2 / span 2;
+    -ms-grid-row-span: 3;
+    grid-row: 2 / span 3;
     height: auto;
     border-radius: 20px;
     margin-top: 15vw;
@@ -315,6 +315,10 @@ html {
     margin-top: -75vw;
     margin-left: 14vw;
     font-size: 1.8em;
+  }
+  #content #profileWrapper.active #subtitle {
+    margin-top: -65vw;
+    margin-left: 14vw;
   }
   #content #profileWrapper #profile {
     -ms-grid-row: 2;
@@ -410,10 +414,7 @@ html {
             transform: rotateZ(45deg);
   }
   #content #profileWrapper #title,
-  #content #profileWrapper #titleActive {
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
+  #content #profileWrapper #subtitle {
     font-family: raleway;
     font-weight: 300;
     letter-spacing: 3px;
@@ -426,12 +427,25 @@ html {
     grid-row: 3;
     -ms-grid-column: 2;
     grid-column: 2;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    text-align: center;
+    font-size: 2.5em;
+    -webkit-transition: 350ms;
+    transition: 350ms;
+  }
+  #content #profileWrapper #subtitle {
+    -ms-grid-row: 4;
+    grid-row: 4;
+    -ms-grid-column: 2;
+    grid-column: 2;
     -ms-flex-item-align: start;
         -ms-grid-row-align: start;
         align-self: start;
     text-align: center;
-    font-size: 2.5em;
-    margin-top: 5vw;
+    font-size: 1.1em;
+    margin-top: -3vw;
     -webkit-transition: 350ms;
     transition: 350ms;
   }
@@ -482,7 +496,7 @@ html {
   #content #projects {
     width: 100vw;
     height: auto;
-    margin-top: -20vw;
+    margin-top: -15vw;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
