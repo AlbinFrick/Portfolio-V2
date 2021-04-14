@@ -97,121 +97,133 @@ html {
   background-color: #c3beb4;
 }
 
-@media screen and (max-width: 600px) {
-  #hamburgerMenu {
-    width: 60%;
-    height: 100vh;
-    background-color: white;
-    position: fixed;
-    top: 0;
-    right: -500px;
-    z-index: 3;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    border-radius: 20% 0 0 50%;
-    -webkit-transition: right 350ms;
-    transition: right 350ms;
-    -webkit-box-shadow: -5px 5px 15px black;
-            box-shadow: -5px 5px 15px black;
-  }
-  #hamburgerMenu #menuButton {
-    width: 10vw;
-    height: 10vw;
-    position: fixed;
-    top: 15px;
-    right: 25px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-transition: right 350ms;
-    transition: right 350ms;
-  }
-  #hamburgerMenu #menuButton .menuBars {
-    width: 100%;
-    height: 2px;
-    background-color: black;
-    -webkit-transition: -webkit-transform 350ms;
-    transition: -webkit-transform 350ms;
-    transition: transform 350ms;
-    transition: transform 350ms, -webkit-transform 350ms;
-  }
-  #hamburgerMenu #menuButton .bar2 {
-    width: 75%;
-    margin-left: 25%;
-  }
-  #hamburgerMenu #menuButton .bar3 {
-    width: 50%;
-    margin-left: 50%;
-  }
-  #hamburgerMenu #menuList {
-    width: 65%;
-    height: 60vh;
-    margin-bottom: 30%;
-    list-style-type: none;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
-  #hamburgerMenu #menuList .item {
-    width: 100%;
-    font-family: raleway;
-    border-radius: 20px;
-    background: #ffffff;
-    -webkit-box-shadow: 6px 6px 12px #c4c4c4, -6px -6px 12px #ffffff;
-            box-shadow: 6px 6px 12px #c4c4c4, -6px -6px 12px #ffffff;
-    text-align: center;
-  }
-  #hamburgerMenu #menuList .item:active, #hamburgerMenu #menuList .item:focus, #hamburgerMenu #menuList .item.active {
-    background: #ffffff;
-    -webkit-box-shadow: inset 6px 6px 12px #c4c4c4, inset -6px -6px 12px #ffffff;
-            box-shadow: inset 6px 6px 12px #c4c4c4, inset -6px -6px 12px #ffffff;
-  }
-  #hamburgerMenu #menuList .nav-link {
-    display: inline-block;
-    width: 100%;
-    text-decoration: none;
-    color: black;
-    padding: 1.3rem 0;
-    border-radius: 20px;
-  }
-  #hamburgerMenu.active {
-    right: 0;
-  }
-  #hamburgerMenu.active #menuButton {
-    right: 40%;
-  }
-  #hamburgerMenu.active #menuButton .bar1 {
-    -webkit-transform: rotateZ(-45deg) translate(-25%, 8px);
-            transform: rotateZ(-45deg) translate(-25%, 8px);
-  }
-  #hamburgerMenu.active #menuButton .bar2 {
-    opacity: 0;
-  }
-  #hamburgerMenu.active #menuButton .bar3 {
-    margin-left: 0;
-    width: 10vw;
-    -webkit-transform: rotateZ(45deg) translate(-25%, -8px);
-            transform: rotateZ(45deg) translate(-25%, -8px);
-  }
+#hamburgerMenu {
+  width: 60%;
+  height: 100vh;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  right: -500px;
+  z-index: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 30px 0 0 10%;
+  -webkit-transition: right 350ms;
+  transition: right 350ms;
+  -webkit-box-shadow: -5px 5px 15px black;
+          box-shadow: -5px 5px 15px black;
+}
+
+#hamburgerMenu #menuButton {
+  width: 10vw;
+  height: 10vw;
+  position: fixed;
+  top: 15px;
+  right: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-transition: right 350ms;
+  transition: right 350ms;
+  cursor: pointer;
+}
+
+#hamburgerMenu #menuButton .menuBars {
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  -webkit-transition: -webkit-transform 350ms;
+  transition: -webkit-transform 350ms;
+  transition: transform 350ms;
+  transition: transform 350ms, -webkit-transform 350ms;
+}
+
+#hamburgerMenu #menuButton .bar2 {
+  width: 75%;
+  margin-left: 25%;
+}
+
+#hamburgerMenu #menuButton .bar3 {
+  width: 50%;
+  margin-left: 50%;
+}
+
+#hamburgerMenu #menuList {
+  width: 65%;
+  height: 60vh;
+  margin-bottom: 30%;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#hamburgerMenu #menuList .item {
+  width: 100%;
+  font-family: raleway;
+  border-radius: 20px;
+  background: #ffffff;
+  -webkit-box-shadow: 6px 6px 12px #c4c4c4, -6px -6px 12px #ffffff;
+          box-shadow: 6px 6px 12px #c4c4c4, -6px -6px 12px #ffffff;
+  text-align: center;
+}
+
+#hamburgerMenu #menuList .item:active, #hamburgerMenu #menuList .item:focus, #hamburgerMenu #menuList .item.active {
+  background: #ffffff;
+  -webkit-box-shadow: inset 6px 6px 12px #c4c4c4, inset -6px -6px 12px #ffffff;
+          box-shadow: inset 6px 6px 12px #c4c4c4, inset -6px -6px 12px #ffffff;
+}
+
+#hamburgerMenu #menuList .nav-link {
+  display: inline-block;
+  width: 100%;
+  text-decoration: none;
+  color: black;
+  padding: 1.3rem 0;
+  border-radius: 20px;
+}
+
+#hamburgerMenu.active {
+  right: 0;
+}
+
+#hamburgerMenu.active #menuButton {
+  right: 45%;
+}
+
+#hamburgerMenu.active #menuButton .bar1 {
+  -webkit-transform: rotateZ(-45deg) translate(-25%, 8px);
+          transform: rotateZ(-45deg) translate(-25%, 8px);
+}
+
+#hamburgerMenu.active #menuButton .bar2 {
+  opacity: 0;
+}
+
+#hamburgerMenu.active #menuButton .bar3 {
+  margin-left: 0;
+  width: 10vw;
+  -webkit-transform: rotateZ(45deg) translate(-25%, -12px);
+          transform: rotateZ(45deg) translate(-25%, -12px);
 }
 
 #content {
@@ -271,184 +283,202 @@ html {
   }
 }
 
-@media screen and (max-width: 600px) {
-  #content #profileWrapper {
-    width: 100vw;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 10vw 80vw 10vw;
-        grid-template-columns: 10vw 80vw 10vw;
-    -ms-grid-rows: 10vw 80vw 20vw 20vw;
-        grid-template-rows: 10vw 80vw 20vw 20vw;
-    height: 130vw;
-    margin-bottom: 5%;
-    -webkit-transition: grid-template-columns 500ms, grid-template-rows 500ms;
-    transition: grid-template-columns 500ms, grid-template-rows 500ms;
-    transition: grid-template-columns 500ms, grid-template-rows 500ms, -ms-grid-columns 500ms, -ms-grid-rows 500ms;
-  }
-  #content #profileWrapper.active #profile {
-    width: 25vw;
-    height: 25vw;
-    margin-left: -5vw;
-    -webkit-box-shadow: 0px 1px 8px;
-            box-shadow: 0px 1px 8px;
-  }
-  #content #profileWrapper.active #aboutMe {
-    -ms-grid-row: 2;
-    -ms-grid-row-span: 3;
-    grid-row: 2 / span 3;
-    height: auto;
-    border-radius: 20px;
-    margin-top: 15vw;
-    background-color: whitesmoke;
-  }
-  #content #profileWrapper.active #aboutMe #buttonOpen {
-    opacity: 0;
-  }
-  #content #profileWrapper.active #aboutMe #buttonClose {
-    opacity: 1;
-  }
-  #content #profileWrapper.active #title {
-    -ms-flex-item-align: initial;
-        -ms-grid-row-align: initial;
-        align-self: initial;
-    margin-top: -75vw;
-    margin-left: 14vw;
-    font-size: 1.8em;
-  }
-  #content #profileWrapper.active #subtitle {
-    margin-top: -65vw;
-    margin-left: 14vw;
-  }
-  #content #profileWrapper #profile {
-    -ms-grid-row: 2;
-    grid-row: 2;
-    -ms-grid-column: 2;
-    grid-column: 2;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    border-radius: 50%;
-    -webkit-box-shadow: 0px 3px 10px;
-            box-shadow: 0px 3px 10px;
-    background-image: url("https://github.com/AlbinFrick/Portfolio-V2/blob/main/data/images/profilepics/Profilbild_Albin3_Small.jpg?raw=true");
-    background-size: cover;
-    -webkit-transition: 350ms;
-    transition: 350ms;
-  }
-  #content #profileWrapper #aboutMe {
-    -ms-grid-row: 2;
-    grid-row: 2;
-    -ms-grid-column: 2;
-    grid-column: 2;
-    height: 100%;
-    border-radius: 300px 300px 20px 300px;
-    border: 1px solid black;
-    position: relative;
-    -webkit-transition: 350ms;
-    transition: 350ms;
-  }
-  #content #profileWrapper #aboutMe .aboutMeTitle {
-    font-family: raleway;
-    font-size: 7vw;
-    margin-top: 15%;
-    padding-left: 15px;
-    font-weight: 300;
-    opacity: 0;
-    -webkit-transition: opacity 350ms;
-    transition: opacity 350ms;
-  }
-  #content #profileWrapper #aboutMe .aboutMeTitle.active {
-    opacity: 1;
-  }
-  #content #profileWrapper #aboutMe .aboutMeDescription {
-    font-family: raleway;
-    font-size: 4.2vw;
-    font-weight: 300;
-    padding: 15px;
-    display: none;
-    -webkit-transition: opacity 350ms;
-    transition: opacity 350ms;
-  }
-  #content #profileWrapper #aboutMe .aboutMeDescription.active {
-    display: inline-block;
-    -webkit-animation: fadeInFromNone 350ms;
-            animation: fadeInFromNone 350ms;
-  }
-  #content #profileWrapper #aboutMe #buttonOpen {
-    font-family: raleway;
-    font-size: 2.7vw;
-    position: absolute;
-    bottom: 7px;
-    right: 7px;
-    border: none;
-    background: transparent;
-    color: black;
-    -webkit-transition: 350ms;
-    transition: 350ms;
-  }
-  #content #profileWrapper #aboutMe #buttonClose {
-    opacity: 0;
-    position: absolute;
-    top: 5%;
-    right: 5%;
-    background: transparent;
-    border: none;
-    width: 20px;
-    height: 20px;
-  }
-  #content #profileWrapper #aboutMe #buttonClose .line {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 20px;
-    height: 1px;
-    background-color: black;
-  }
-  #content #profileWrapper #aboutMe #buttonClose .line:first-child {
-    -webkit-transform: rotateZ(-45deg);
-            transform: rotateZ(-45deg);
-  }
-  #content #profileWrapper #aboutMe #buttonClose .line:last-child {
-    -webkit-transform: rotateZ(45deg);
-            transform: rotateZ(45deg);
-  }
-  #content #profileWrapper #title,
-  #content #profileWrapper #subtitle {
-    font-family: raleway;
-    font-weight: 300;
-    letter-spacing: 3px;
-    display: inline-block;
-    -webkit-transition: 0;
-    transition: 0;
-  }
-  #content #profileWrapper #title {
-    -ms-grid-row: 3;
-    grid-row: 3;
-    -ms-grid-column: 2;
-    grid-column: 2;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-    text-align: center;
-    font-size: 2.5em;
-    -webkit-transition: 350ms;
-    transition: 350ms;
-  }
-  #content #profileWrapper #subtitle {
-    -ms-grid-row: 4;
-    grid-row: 4;
-    -ms-grid-column: 2;
-    grid-column: 2;
-    -ms-flex-item-align: start;
-        -ms-grid-row-align: start;
-        align-self: start;
-    text-align: center;
-    font-size: 1.1em;
-    margin-top: -3vw;
-    -webkit-transition: 350ms;
-    transition: 350ms;
-  }
+#content #profileWrapper {
+  width: 100vw;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 10vw 80vw 10vw;
+      grid-template-columns: 10vw 80vw 10vw;
+  -ms-grid-rows: 10vw 80vw 20vw 20vw;
+      grid-template-rows: 10vw 80vw 20vw 20vw;
+  height: 130vw;
+  margin-bottom: 5%;
+  -webkit-transition: grid-template-columns 500ms, grid-template-rows 500ms;
+  transition: grid-template-columns 500ms, grid-template-rows 500ms;
+  transition: grid-template-columns 500ms, grid-template-rows 500ms, -ms-grid-columns 500ms, -ms-grid-rows 500ms;
+}
+
+#content #profileWrapper.active #profile {
+  width: 25vw;
+  height: 25vw;
+  margin-left: -5vw;
+  -webkit-box-shadow: 0px 1px 8px;
+          box-shadow: 0px 1px 8px;
+}
+
+#content #profileWrapper.active #aboutMe {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 3;
+  grid-row: 2 / span 3;
+  height: auto;
+  border-radius: 20px;
+  margin-top: 15vw;
+  background-color: whitesmoke;
+}
+
+#content #profileWrapper.active #aboutMe #buttonOpen {
+  opacity: 0;
+}
+
+#content #profileWrapper.active #aboutMe #buttonClose {
+  opacity: 1;
+}
+
+#content #profileWrapper.active #title {
+  -ms-flex-item-align: initial;
+      -ms-grid-row-align: initial;
+      align-self: initial;
+  margin-top: -75vw;
+  margin-left: 14vw;
+  font-size: 1.8em;
+}
+
+#content #profileWrapper.active #subtitle {
+  margin-top: -65vw;
+  margin-left: 14vw;
+}
+
+#content #profileWrapper #profile {
+  -ms-grid-row: 2;
+  grid-row: 2;
+  -ms-grid-column: 2;
+  grid-column: 2;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 3px 10px;
+          box-shadow: 0px 3px 10px;
+  background-image: url("https://github.com/AlbinFrick/Portfolio-V2/blob/main/data/images/profilepics/Profilbild_Albin3_Small.jpg?raw=true");
+  background-size: cover;
+  -webkit-transition: 350ms;
+  transition: 350ms;
+}
+
+#content #profileWrapper #aboutMe {
+  -ms-grid-row: 2;
+  grid-row: 2;
+  -ms-grid-column: 2;
+  grid-column: 2;
+  height: 100%;
+  border-radius: 300px 300px 20px 300px;
+  border: 1px solid black;
+  position: relative;
+  -webkit-transition: 350ms;
+  transition: 350ms;
+}
+
+#content #profileWrapper #aboutMe .aboutMeTitle {
+  font-family: raleway;
+  font-size: 7vw;
+  margin-top: 15%;
+  padding-left: 15px;
+  font-weight: 300;
+  opacity: 0;
+  -webkit-transition: opacity 350ms;
+  transition: opacity 350ms;
+}
+
+#content #profileWrapper #aboutMe .aboutMeTitle.active {
+  opacity: 1;
+}
+
+#content #profileWrapper #aboutMe .aboutMeDescription {
+  font-family: raleway;
+  font-size: 4.2vw;
+  font-weight: 300;
+  padding: 15px;
+  display: none;
+  -webkit-transition: opacity 350ms;
+  transition: opacity 350ms;
+}
+
+#content #profileWrapper #aboutMe .aboutMeDescription.active {
+  display: inline-block;
+  -webkit-animation: fadeInFromNone 350ms;
+          animation: fadeInFromNone 350ms;
+}
+
+#content #profileWrapper #aboutMe #buttonOpen {
+  font-family: raleway;
+  font-size: 2.7vw;
+  position: absolute;
+  bottom: 7px;
+  right: 7px;
+  border: none;
+  background: transparent;
+  color: black;
+  -webkit-transition: 350ms;
+  transition: 350ms;
+}
+
+#content #profileWrapper #aboutMe #buttonClose {
+  opacity: 0;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  background: transparent;
+  border: none;
+  width: 20px;
+  height: 20px;
+}
+
+#content #profileWrapper #aboutMe #buttonClose .line {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20px;
+  height: 1px;
+  background-color: black;
+}
+
+#content #profileWrapper #aboutMe #buttonClose .line:first-child {
+  -webkit-transform: rotateZ(-45deg);
+          transform: rotateZ(-45deg);
+}
+
+#content #profileWrapper #aboutMe #buttonClose .line:last-child {
+  -webkit-transform: rotateZ(45deg);
+          transform: rotateZ(45deg);
+}
+
+#content #profileWrapper #title,
+#content #profileWrapper #subtitle {
+  font-family: raleway;
+  font-weight: 300;
+  letter-spacing: 3px;
+  display: inline-block;
+  -webkit-transition: 0;
+  transition: 0;
+}
+
+#content #profileWrapper #title {
+  -ms-grid-row: 3;
+  grid-row: 3;
+  -ms-grid-column: 2;
+  grid-column: 2;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  text-align: center;
+  font-size: 2.5em;
+  -webkit-transition: 350ms;
+  transition: 350ms;
+}
+
+#content #profileWrapper #subtitle {
+  -ms-grid-row: 4;
+  grid-row: 4;
+  -ms-grid-column: 2;
+  grid-column: 2;
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+  text-align: center;
+  font-size: 1.1em;
+  margin-top: -3vw;
+  -webkit-transition: 350ms;
+  transition: 350ms;
 }
 
 @keyframes fadeInFromNone {
@@ -492,132 +522,138 @@ html {
   }
 }
 
-@media screen and (max-width: 600px) {
-  #content #projects {
-    width: 100vw;
-    height: auto;
-    margin-top: -15vw;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-transition: 200ms;
-    transition: 200ms;
-  }
-  #content #projects.active {
-    margin-top: 0;
-  }
-  #content #projects h4 {
-    font-family: raleway;
-    font-weight: 300;
-    display: inline-block;
-    width: 100vw;
-    margin-left: 5%;
-    -webkit-text-decoration-line: underline;
-            text-decoration-line: underline;
-    text-align: left;
-  }
-  #content #projects .project {
-    width: 80vw;
-    height: 17vw;
-    border-radius: 20px;
-    background: #e1dfd8;
-    -webkit-box-shadow: 0px 0px 5px 0.5px;
-            box-shadow: 0px 0px 5px 0.5px;
-    margin: 4% 0;
-    -webkit-transition: 350ms;
-    transition: 350ms;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  #content #projects .project .projectTitle {
-    font-family: raleway;
-    font-weight: 400;
-    line-height: 17vw;
-    margin-left: 3%;
-    -webkit-transition: font-weight 500ms, font-size 500ms;
-    transition: font-weight 500ms, font-size 500ms;
-  }
-  #content #projects .project .projectDescription {
-    font-family: raleway;
-    font-size: 0.9em;
-    line-height: 1.4em;
-    padding: 0 15px 15px 15px;
-    display: none;
-  }
-  #content #projects .project .projectImage {
-    width: 50%;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-    display: none;
-    border-radius: 5px;
-  }
-  #content #projects .project .projectURL {
-    width: 40%;
-    font-family: raleway;
-    background-color: #fdeec2;
-    border-radius: 5px;
-    text-decoration: none;
-    color: black;
-    display: none;
-    padding: 5px;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-    margin-top: 10px;
-    text-align: center;
-  }
-  #content #projects .project.active {
-    width: 90vw;
-    height: auto;
-    padding-bottom: 20px;
-    background-color: white;
-  }
-  #content #projects .project.active .projectDescription,
-  #content #projects .project.active .projectURL,
-  #content #projects .project.active .projectImage {
-    display: block;
-    -webkit-animation: fadeInFromNone 1s;
-            animation: fadeInFromNone 1s;
-  }
-  #content #projects .project.active .projectTitle {
-    font-weight: 400;
-    font-size: 2rem;
-  }
+#content #projects {
+  width: 100vw;
+  height: auto;
+  margin-top: -15vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 200ms;
+  transition: 200ms;
 }
 
-@media screen and (max-width: 600px) {
-  #footer {
-    width: 100%;
-    height: 10vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-    margin-bottom: 5%;
-  }
+#content #projects.active {
+  margin-top: 0;
+}
+
+#content #projects h4 {
+  font-family: raleway;
+  font-weight: 300;
+  display: inline-block;
+  width: 100vw;
+  margin-left: 5%;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  text-align: left;
+}
+
+#content #projects .project {
+  width: 80vw;
+  height: 17vw;
+  border-radius: 20px;
+  background: #e1dfd8;
+  -webkit-box-shadow: 0px 0px 5px 0.5px;
+          box-shadow: 0px 0px 5px 0.5px;
+  margin: 4% 0;
+  -webkit-transition: 350ms;
+  transition: 350ms;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#content #projects .project .projectTitle {
+  font-family: raleway;
+  font-weight: 400;
+  line-height: 17vw;
+  margin-left: 3%;
+  -webkit-transition: font-weight 500ms, font-size 500ms;
+  transition: font-weight 500ms, font-size 500ms;
+}
+
+#content #projects .project .projectDescription {
+  font-family: raleway;
+  font-size: 0.9em;
+  line-height: 1.4em;
+  padding: 0 15px 15px 15px;
+  display: none;
+}
+
+#content #projects .project .projectImage {
+  width: 50%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  display: none;
+  border-radius: 5px;
+}
+
+#content #projects .project .projectURL {
+  width: 40%;
+  font-family: raleway;
+  background-color: #fdeec2;
+  border-radius: 5px;
+  text-decoration: none;
+  color: black;
+  display: none;
+  padding: 5px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-top: 10px;
+  text-align: center;
+}
+
+#content #projects .project.active {
+  width: 90vw;
+  height: auto;
+  padding-bottom: 20px;
+  background-color: white;
+}
+
+#content #projects .project.active .projectDescription,
+#content #projects .project.active .projectURL,
+#content #projects .project.active .projectImage {
+  display: block;
+  -webkit-animation: fadeInFromNone 1s;
+          animation: fadeInFromNone 1s;
+}
+
+#content #projects .project.active .projectTitle {
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+#footer {
+  width: 100%;
+  height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin-bottom: 5%;
 }
 /*# sourceMappingURL=style_min.css.map */
